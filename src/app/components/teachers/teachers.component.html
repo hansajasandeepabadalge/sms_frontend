@@ -1,0 +1,135 @@
+<div class="bg-white shadow-sm">
+  <div class="mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gray-700">TEACHERS</h1>
+    <div class="flex items-center space-x-2">
+      <nav class="text-sm">
+        <span class="text-gray-500">Dashboard</span>
+        <span class="text-gray-500 mx-1">›</span>
+        <span class="text-blue-500 font-medium">Teachers</span>
+      </nav>
+      <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+        Create New
+      </button>
+    </div>
+  </div>
+</div>
+
+<main class="mx-auto p-4">
+  <div class="bg-white rounded-lg shadow-md p-6">
+
+    <!-- Filter Controls -->
+    <div class="flex justify-between mb-6">
+      <div class="w-full max-w-xl">
+        <div class="relative flex">
+          <label for="class-select" class="text-gray-600 mr-2 w-52 flex items-center justify-center">Select Class Name</label>
+          <select
+            id="class-select"
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-400 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-cyan-400 hover:border-cyan-500 appearance-none cursor-pointer">
+            <option value="class01">Class 01</option>
+            <option value="class02">Class 02</option>
+            <option value="class03">Class 03</option>
+            <option value="class04">Class 04</option>
+          </select>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="flex space-x-2">
+        <div class="dropdown inline-block relative">
+          <button class="bg-green-100 hover:bg-green-200 text-green-700 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            Print
+          </button>
+        </div>
+
+        <div class="dropdown inline-block relative">
+          <button class="bg-gray-500 hover:bg-gray-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            Import
+          </button>
+        </div>
+
+        <div class="dropdown inline-block relative">
+          <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            Export
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action and Search -->
+    <div class="flex justify-between mb-4">
+      <select
+        class="border border-slate-400 rounded-md px-3 py-2 w-48 text-sm text-slate-700 bg-transparent placeholder:text-slate-400 transition duration-300 ease focus:outline-none focus:border-cyan-400 hover:border-cyan-500 cursor-pointer">
+        <option>Select Action</option>
+        <option>Delete Selected</option>
+        <option>Mark as Active</option>
+      </select>
+
+      <div class="relative">
+        <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md px-3 py-2 w-64">
+        <span class="absolute right-3 top-2.5 text-gray-400">
+          </span>
+      </div>
+    </div>
+
+    <!-- Students Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead>
+        <tr class="bg-gray-50 border-b">
+          <th class="w-10 px-4 py-3">
+            <input type="checkbox" class="rounded">
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Tech No
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Full Name
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Gender
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Email
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Subject
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Phone No
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Action
+          </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr class="table-row-light border-b">
+          <td class="px-4 py-3">
+            <input type="checkbox" class="rounded">
+          </td>
+          <td class="px-4 py-3"></td>
+          <td class="px-4 py-3"></td>
+          <td class="px-4 py-3"></td>
+          <td class="px-4 py-3"></td>
+          <td class="px-4 py-3"></td>
+          <td class="px-4 py-3"></td>
+          <td class="px-4 py-3">
+            <div class="flex space-x-4">
+              <button class="text-green-500 hover:text-green-700">View</button>
+              <button class="text-blue-500 hover:text-blue-700">Edit</button>
+              <button class="text-red-500 hover:text-red-700">Delete</button>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</main>

@@ -1,0 +1,114 @@
+<div class="bg-white shadow-sm">
+  <div class="mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gray-700">STUDENTS</h1>
+    <div class="flex items-center space-x-2">
+      <nav class="text-sm">
+        <span class="text-gray-500">Dashboard</span>
+        <span class="text-gray-500 mx-1">›</span>
+        <span class="text-blue-500 font-medium">Students</span>
+      </nav>
+      <button (click)="createNewStudent()" class="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+        Create New
+      </button>
+    </div>
+  </div>
+</div>
+
+<main class="mx-auto p-4">
+  <div class="bg-white rounded-lg shadow-md p-6">
+
+
+
+    <!-- Filter Controls -->
+    <div class="flex justify-between mb-2">
+
+      <!-- Action and Search -->
+      <div class="flex justify-between mb-2">
+        <div class="relative">
+          <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md px-3 py-2 w-64" [(ngModel)]="searchTerm">
+          <span class="absolute right-3 top-2.5 text-gray-400">
+          </span>
+        </div>
+      </div>
+
+      <div class="flex space-x-2">
+        <div class="dropdown inline-block relative">
+          <button (click)="print()" class="bg-green-100 hover:bg-green-200 text-green-700 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            Print
+          </button>
+        </div>
+
+        <div class="dropdown inline-block relative">
+          <button (click)="importData()" class="bg-gray-500 hover:bg-gray-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            Import
+          </button>
+        </div>
+
+        <div class="dropdown inline-block relative">
+          <button (click)="exportData()" class="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            Export
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Students Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead>
+        <tr class="bg-gray-50 border-b">
+          <th class="w-10 px-4 py-3">
+            <input type="checkbox" class="rounded">
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Reg No
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Full Name
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Parent
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Classroom
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Street Address
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Phone No
+          </th>
+          <th class="px-4 py-3 text-left text-gray-700 text-sm font-medium">
+            Action
+          </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let student of students" class="table-row-light border-b">
+          <td class="px-4 py-3">
+            <input type="checkbox" class="rounded">
+          </td>
+          <td class="px-4 py-3">{{ student.studentId }}</td>
+          <td class="px-4 py-3">{{ student.firstName + " " +student.lastName }}</td>
+          <td class="px-4 py-3">{{ student.parentName }}</td>
+          <td class="px-4 py-3">{{ student.classroom.className }}</td>
+          <td class="px-4 py-3">{{ student.address }}</td>
+          <td class="px-4 py-3">{{ student.parentPhone }}</td>
+          <td class="px-4 py-3">
+            <div class="flex space-x-4">
+              <button (click)="viewStudent(student)" class="text-green-500 hover:text-green-700">View</button>
+              <button (click)="editStudent(student)" class="text-blue-500 hover:text-blue-700">Edit</button>
+              <button (click)="deleteStudent(student)" class="text-red-500 hover:text-red-700">Delete</button>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</main>
