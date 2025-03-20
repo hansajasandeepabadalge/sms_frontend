@@ -32,9 +32,14 @@ export class StudentsComponent implements OnInit {
     })
   }
 
-  createNewStudent(): void {
-    console.log('Create new student');
-    console.log(this.students);
+  isModalOpen = false;
+
+  toggleModal() {
+    this.isModalOpen = !this.isModalOpen;
+  }
+
+  createNewStudent() {
+    this.toggleModal();
   }
 
   print(): void {

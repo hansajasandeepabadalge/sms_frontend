@@ -11,9 +11,7 @@ import { TeachersComponent } from './components/teachers/teachers.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { StudentCreateComponent } from './components/student-create/student-create.component';
+import { CreateStudentComponent } from './components/create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +22,7 @@ import { StudentCreateComponent } from './components/student-create/student-crea
     StudentsComponent,
     TeachersComponent,
     ClassesComponent,
-    LoginComponent,
-    RegisterComponent,
-    StudentCreateComponent
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
