@@ -11,7 +11,7 @@ import { TeachersComponent } from './components/teachers/teachers.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-import { CreateStudentComponent } from './components/create-student/create-student.component';
+import { CreateStudentsFormComponent } from './components/students/create-students-form/create-students-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { CreateStudentComponent } from './components/create-student/create-stude
     StudentsComponent,
     TeachersComponent,
     ClassesComponent,
-    CreateStudentComponent
+    CreateStudentsFormComponent
   ],
   imports: [
     BrowserModule,

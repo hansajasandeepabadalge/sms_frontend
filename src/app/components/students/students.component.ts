@@ -12,6 +12,7 @@ export class StudentsComponent implements OnInit {
   students: Student[] = [];
   classrooms: Classroom[] = [];
   searchTerm: string = '';
+  isModalOpen = false;
 
   constructor(private http: HttpClient, private studentService: StudentService,) {}
 
@@ -31,8 +32,6 @@ export class StudentsComponent implements OnInit {
       this.classrooms = data;
     })
   }
-
-  isModalOpen = false;
 
   toggleModal() {
     this.isModalOpen = !this.isModalOpen;
