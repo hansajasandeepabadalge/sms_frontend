@@ -1,0 +1,97 @@
+<div class="bg-white shadow-sm">
+  <div class="mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gray-700">CREATE STUDENT</h1>
+    <div class="flex items-center space-x-2">
+      <nav class="text-sm">
+        <span routerLink="/dashboard" class="text-gray-500 cursor-pointer">Dashboard</span>
+        <span class="text-gray-500 mx-1">›</span>
+        <span routerLink="/students" class="text-gray-500 cursor-pointer">Students</span>
+        <span class="text-gray-500 mx-1">›</span>
+        <span routerLink="/students/create" class="text-blue-500 font-medium cursor-pointer">Create</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<main class="mx-auto p-4">
+  <div class="bg-white rounded-lg shadow-md p-6 w-full mx-auto">
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div class="space-x-6 flex">
+        <!-- Student Information Section -->
+        <div>
+          <h2 class="text-lg font-bold text-gray-700 border-b pb-2">Student Information</h2>
+          <div class="flex flex-wrap gap-4 mt-4">
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">First Name</label>
+              <input type="text" formControlName="firstName" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Last Name</label>
+              <input type="text" formControlName="lastName" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Date of Birth</label>
+              <input type="date" formControlName="dateOfBirth" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Gender</label>
+              <select formControlName="gender" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parent Information Section -->
+        <div>
+          <h2 class="text-lg font-bold text-gray-700 border-b pb-2">Parent Information</h2>
+          <div class="flex flex-wrap gap-4 mt-4">
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Parent Name</label>
+              <input type="text" formControlName="parentName" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Parent Email</label>
+              <input type="email" formControlName="parentEmail" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Parent Phone</label>
+              <input type="tel" formControlName="parentPhone" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Address</label>
+              <textarea formControlName="address" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enrollment Section -->
+        <div>
+          <h2 class="text-lg font-bold text-gray-700 border-b pb-2">Enrollment Information</h2>
+          <div class="flex flex-wrap gap-4 mt-4">
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Enrollment Date</label>
+              <input type="date" formControlName="enrollmentDate" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Status</label>
+              <select formControlName="status" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="ACTIVE">Active</option>
+                <option value="INACTIVE">Inactive</option>
+              </select>
+            </div>
+            <div class="w-full">
+              <label class="block text-gray-700 font-medium">Classroom ID</label>
+              <input type="number" formControlName="classId" class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-right mt-6">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Create Student</button>
+      </div>
+    </form>
+  </div>
+</main>
