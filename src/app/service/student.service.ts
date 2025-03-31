@@ -16,7 +16,13 @@ export class StudentService {
     return this.http.get<Student[]>(`${this.baseUrl}/students`);
   }
 
+  createStudent(student: Student): Observable<Student> {
+    return this.http.post<Student>(`${this.baseUrl}`, student);
+  }
+
   getClassrooms(): Observable<Classroom[]> {
     return this.http.get<Classroom[]>(`${this.baseUrl}/classrooms`);
   }
+
+
 }

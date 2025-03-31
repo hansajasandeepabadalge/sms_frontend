@@ -2,13 +2,13 @@ export interface Student {
   studentId: number;
   firstName: string;
   lastName: string;
-  dateOfBirth: string; // Format: YYYY-MM-DD
+  dateOfBirth: string;
   gender: string;
   parentName: string;
   parentEmail: string;
   parentPhone: string;
   address: string;
-  enrollmentDate: string; // Format: YYYY-MM-DD
+  enrollmentDate: string;
   status: string;
   classroom: Classroom;
 }

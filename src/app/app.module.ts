@@ -10,8 +10,7 @@ import { StudentsComponent } from './components/students/students.component';
 import { TeachersComponent } from './components/teachers/teachers.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
-import { CreateStudentsFormComponent } from './components/students/create-students-form/create-students-form.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,15 +20,15 @@ import { CreateStudentsFormComponent } from './components/students/create-studen
     DashboardComponent,
     StudentsComponent,
     TeachersComponent,
-    ClassesComponent,
-    CreateStudentsFormComponent
+    ClassesComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
