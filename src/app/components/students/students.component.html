@@ -3,13 +3,10 @@
     <h1 class="text-xl font-bold text-gray-700">STUDENTS</h1>
     <div class="flex items-center space-x-2">
       <nav class="text-sm">
-        <span class="text-gray-500">Dashboard</span>
+        <span routerLink="/dashboard" class="text-gray-500 pointer-event cursor-pointer">Dashboard</span>
         <span class="text-gray-500 mx-1">›</span>
-        <span class="text-blue-500 font-medium">Students</span>
+        <span routerLink="/students" class="text-blue-500 font-medium cursor-pointer">Students</span>
       </nav>
-      <button (click)="createNewStudent()" class="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
-        Create New
-      </button>
     </div>
   </div>
 </div>
@@ -31,20 +28,8 @@
 
       <div class="flex space-x-2">
         <div class="dropdown inline-block relative">
-          <button (click)="print()" class="bg-green-100 hover:bg-green-200 text-green-700 px-3 py-2 rounded-md text-sm font-medium flex items-center">
-            Print
-          </button>
-        </div>
-
-        <div class="dropdown inline-block relative">
-          <button (click)="importData()" class="bg-gray-500 hover:bg-gray-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
-            Import
-          </button>
-        </div>
-
-        <div class="dropdown inline-block relative">
-          <button (click)="exportData()" class="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
-            Export
+          <button routerLink="/students/create" class="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            Create New
           </button>
         </div>
       </div>

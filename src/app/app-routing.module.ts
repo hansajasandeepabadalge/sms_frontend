@@ -4,10 +4,12 @@ import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {StudentsComponent} from "./components/students/students.component";
 import {TeachersComponent} from "./components/teachers/teachers.component";
 import {ClassesComponent} from "./components/classes/classes.component";
+import {CreatestudentComponent} from "./components/students/createstudent/createstudent.component";
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'students', component: StudentsComponent },
+  { path: 'students/create', component: CreatestudentComponent },
   { path: 'teachers', component: TeachersComponent },
   { path: 'classes', component: ClassesComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

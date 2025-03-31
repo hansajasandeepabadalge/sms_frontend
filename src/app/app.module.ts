@@ -11,6 +11,7 @@ import { TeachersComponent } from './components/teachers/teachers.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { CreatestudentComponent } from './components/students/createstudent/createstudent.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     DashboardComponent,
     StudentsComponent,
     TeachersComponent,
-    ClassesComponent
+    ClassesComponent,
+    CreatestudentComponent
   ],
     imports: [
         BrowserModule,
